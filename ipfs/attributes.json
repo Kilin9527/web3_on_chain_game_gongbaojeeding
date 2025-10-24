@@ -1,0 +1,195 @@
+{
+    "basic_attributes": [
+        {
+            "type": "HP",
+            "name": "Health Points",
+            "description": "Health Points. Once it drops to 0, the character dies and the game ends."
+        },
+        {
+            "type": "MP",
+            "name": "Mana Points",
+            "description": "Mana Points. Consumed when using spells."
+        },
+        {
+            "type": "STR",
+            "name": "Strength",
+            "description": "Strength. Affects the character's physical attack power, HP, and physical defense."
+        },
+        {
+            "type": "AGI",
+            "name": "Agility",
+            "description": "Agility. Affects the character's physical hit rate, physical evasion rate, and physical penetration."
+        },
+        {
+            "type": "STA",
+            "name": "Stamina",
+            "description": "Stamina. Affects the character's HP, physical defense, and magic defense."
+        },
+        {
+            "type": "INT",
+            "name": "Intellect",
+            "description": "Intellect. Affects the character's magic attack power, MP, and magic defense."
+        },
+        {
+            "type": "SPI",
+            "name": "Spirit",
+            "description": "Spirit. Affects the character's magic hit rate, magic evasion rate, and magic penetration."
+        }
+    ],
+    "general_attributes": [
+        {
+            "type": "CC",
+            "name": "Critical Hit Chance",
+            "description": "Critical Hit Chance. The probability of dealing critical damage to enemies."
+        },
+        {
+            "type": "CD",
+            "name": "Critical Damage",
+            "description": "Critical Damage. The base critical damage is 150% of normal damage."
+        },
+        {
+            "type": "HP Regen/Turn",
+            "name": "HP Regen/Turn",
+            "description": "HP Regen/Turn. The health automatically restored per turn."
+        },
+        {
+            "type": "MP Regen/Turn",
+            "name": "MP Regen/Turn",
+            "description": "MP Regen/Turn. The mana automatically restored per turn."
+        },
+        {
+            "type": "HS",
+            "name": "Health Steal",
+            "description": "Health Steal. The health absorbed with each attack."
+        },
+        {
+            "type": "MS",
+            "name": "Mana Steal",
+            "description": "Mana Steal. The mana absorbed with each attack."
+        }
+    ],
+    "physical_attributes": [
+        {
+            "type": "ATK",
+            "name": "Physical Attack Power",
+            "description": "Physical Attack Power. Deals physical damage to enemies."
+        },
+        {
+            "type": "DEF",
+            "name": "Physical Defense",
+            "description": "Physical Defense. Resists physical damage from enemies."
+        },
+        {
+            "type": "PHR",
+            "name": "Physical Hit Rate",
+            "description": "Physical Hit Rate. The probability of hitting an enemy, default 90%."
+        },
+        {
+            "type": "PER",
+            "name": "Physical Evasion Rate",
+            "description": "Physical Evasion Rate. The probability of dodging an enemy's attack, default 0%."
+        },
+        {
+            "type": "PPen",
+            "name": "Physical Penetration",
+            "description": "Physical Penetration. Ignores the enemy's defense."
+        }
+    ],
+    "magical_attributes": [
+        {
+            "type": "FireDamage",
+            "name": "Fire Attribute Damage",
+            "description": "FireDamage. Fire Attribute Damage."
+        },
+        {
+            "type": "ColdDamage",
+            "name": "Cold Attribute Damage",
+            "description": "ColdDamage. Cold Attribute Damage."
+        },
+        {
+            "type": "WindDamage",
+            "name": "Wind Attribute Damage",
+            "description": "WindDamage. Wind Attribute Damage."
+        },
+        {
+            "type": "ThunderDamage",
+            "name": "Thunder Attribute Damage",
+            "description": "ThunderDamage. Thunder Attribute Damage."
+        },
+        {
+            "type": "EarthDamage",
+            "name": "Earth Attribute Damage",
+            "description": "EarthDamage. Earth Attribute Damage."
+        },
+        {
+            "type": "LightDamage",
+            "name": "Light Attribute Damage",
+            "description": "LightDamage. Light Attribute Damage."
+        },
+        {
+            "type": "DarkDamage",
+            "name": "Dark Attribute Damage",
+            "description": "DarkDamage. Dark Attribute Damage."
+        },
+        {
+            "type": "ChaosDamage",
+            "name": "Chaos Damage",
+            "description": "ChaosDamage. Chaos Damage."
+        },
+        {
+            "type": "FireResistance",
+            "name": "Fire Attribute Resistance",
+            "description": "FireResistance. Fire Attribute Resistance."
+        },
+        {
+            "type": "ColdResistance",
+            "name": "Cold Attribute Resistance",
+            "description": "ColdResistance. Cold Attribute Resistance."
+        },
+        {
+            "type": "WindResistance",
+            "name": "Wind Attribute Resistance",
+            "description": "WindResistance. Wind Attribute Resistance."
+        },
+        {
+            "type": "ThunderResistance",
+            "name": "Thunder Attribute Resistance",
+            "description": "ThunderResistance. Thunder Attribute Resistance."
+        },
+        {
+            "type": "EarthResistance",
+            "name": "Earth Attribute Resistance",
+            "description": "EarthResistance. Earth Attribute Resistance."
+        },
+        {
+            "type": "LightResistance",
+            "name": "Light Attribute Resistance",
+            "description": "LightResistance. Light Attribute Resistance."
+        },
+        {
+            "type": "DarkResistance",
+            "name": "Dark Attribute Resistance",
+            "description": "DarkResistance. Dark Attribute Resistance."
+        },
+        {
+            "type": "ChaosResistance",
+            "name": "Chaos Resistance",
+            "description": "ChaosResistance. Chaos Resistance."
+        },
+        {
+            "type": "MHR",
+            "name": "Magic Hit Rate",
+            "description": "Magic Hit Rate. The probability of a spell hitting an enemy, default 90%."
+        },
+        {
+            "type": "MER",
+            "name": "Magic Evasion Rate",
+            "description": "Magic Evasion Rate. The probability of dodging an enemy's magical attack, default 0%."
+        },
+        {
+            "type": "MPen",
+            "name": "Magic Penetration",
+            "description": "Magic Penetration. Ignores the enemy's magic defense."
+        }
+    ]
+}
