@@ -1,1 +1,27 @@
+# Ignore macOS system files
 .DS_Store
+*.DS_Store
+.DS_Store?
+._*
+*.log
+*.crash
+xcrun_logs/
+*.tmp
+*.temp
+
+# Ignore iOS files
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/contents.xcworkspacedata
+!default.xcworkspacedata
+UserInterfaceState.xcuserstate
+*.xcbreakpoints
+build/
+DerivedData/
+*.build/
+*.app
+*.ipa
+*.dSYM.zip
+*.dSYM/
+*.gcno
+*.gcda
