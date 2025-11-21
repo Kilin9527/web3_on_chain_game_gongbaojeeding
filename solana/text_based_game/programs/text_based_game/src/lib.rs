@@ -19,7 +19,11 @@ pub mod text_based_game {
         initialize_handler(ctx, name)
     }
 
-    pub fn update(ctx: Context<Update>, exp: Option<u32>, gold: Option<i32>) -> Result<()> {
-        update_handler(ctx, exp, gold)
+    pub fn update_gold(ctx: Context<UpdateGold>, gold: i32) -> Result<()> {
+        update_gold_handler(ctx, gold)
+    }
+
+    pub fn update_exp(ctx: Context<UpdateExp>, exp: u32) -> Result<()> {
+        update_exp_handler(ctx, exp)
     }
 }

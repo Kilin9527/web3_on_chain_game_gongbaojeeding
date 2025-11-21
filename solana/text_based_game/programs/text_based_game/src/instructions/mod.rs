@@ -1,5 +1,7 @@
 pub mod initialize;
-pub mod update;
+pub mod update_gold;
+pub mod update_exp;
 
 pub use initialize::*;
-pub use update::*;
+pub use update_gold::*;
+pub use update_exp::*;
