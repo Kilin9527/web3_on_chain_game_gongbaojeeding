@@ -14,7 +14,7 @@ pub struct Initialize<'info> {
         seeds = [b"user", signer.key().as_ref()],
         bump
     )]
-    pub user_pda: Account<'info, User>,
+    pub pda: Account<'info, User>,
     pub system_program: Program<'info, System>,
 }
 
@@ -22,10 +22,10 @@ pub fn initialize_handler(ctx: Context<Initialize>, name: String) -> Result<()> 
     require!(name.len() >= 2, ErrorCode::UserNameTooShort);
     require!(name.len() <= 20, ErrorCode::UserNameTooLong);
     
-    let user = &mut ctx.accounts.user_pda;
+    let user = &mut ctx.accounts.pda;
     user.gold = 0;
     user.exp = 0;
-    user.bump = ctx.bumps.user_pda;
+    user.bump = ctx.bumps.pda;
     user.name = name;
     user.authority = ctx.accounts.signer.key();
 

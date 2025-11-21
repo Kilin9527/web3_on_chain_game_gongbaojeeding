@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Anchor TS Test Debug", // 调试配置名称（自定义）
+      "type": "node", // 调试类型（Node.js 环境）
+      "request": "launch", // 启动模式（主动启动调试）
+      "program": "${workspaceFolder}/node_modules/.bin/mocha", // 测试运行器（Anchor 用 mocha 执行测试）
+      "args": [
+        "${workspaceFolder}/tests/**/*.ts", // 测试文件路径（匹配所有 tests 下的 .ts 测试文件）
+        "--require", "ts-node/register", // 启用 ts-node 直接运行 TS（无需手动编译为 JS）
+        "--timeout", "100000" // 延长超时时间（避免调试时超时）
+      ],
+      "cwd": "${workspaceFolder}", // 工作目录（项目根目录）
+      "console": "integratedTerminal", // 输出日志到 VS Code 集成终端
+      "internalConsoleOptions": "neverOpen", // 不自动打开内部控制台
+      "env": {
+        // 关键：指定 Solana RPC 为本地测试网（与手动启动的 localnet 一致）
+        "ANCHOR_PROVIDER_URL": "http://localhost:8899",
+        // 指定钱包（使用本地测试钱包，如 solana-keygen new 生成的默认钱包）
+        "ANCHOR_WALLET": "/Users/kilin/Desktop/id.json"
+      },
+      "sourceMaps": true, // 启用 SourceMap，确保断点映射到 TS 源码（而非编译后的 JS）
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // 忽略 node_modules 的 SourceMap
+      ]
+    }
+  ]
+}

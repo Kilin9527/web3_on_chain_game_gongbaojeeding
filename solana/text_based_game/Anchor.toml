@@ -8,6 +8,9 @@ skip-lint = false
 [programs.localnet]
 text_based_game = "8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH"
 
+[programs.devnet]
+text_based_game = "8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH"
+
 [registry]
 url = "https://api.apr.dev"
 

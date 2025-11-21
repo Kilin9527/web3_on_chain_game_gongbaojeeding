@@ -12,10 +12,10 @@ pub use state::*;
 declare_id!("8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH");
 
 #[program]
-pub mod gongbaojeeding {
+pub mod text_based_game {
     use super::*;
 
-    pub fn create(ctx: Context<Initialize>, name: String) -> Result<()> {
+    pub fn initialize(ctx: Context<Initialize>, name: String) -> Result<()> {
         initialize_handler(ctx, name)
     }
 

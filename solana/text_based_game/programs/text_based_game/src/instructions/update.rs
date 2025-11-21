@@ -11,16 +11,16 @@ pub struct Update<'info> {
     #[account(
         mut,
         seeds = [b"user", signer.key().as_ref()],
-        bump = user_pda.bump,
-        constraint = user_pda.authority == signer.key() @ ErrorCode::UnauthorizedAccount,
+        bump = pda.bump,
+        constraint = pda.authority == signer.key() @ ErrorCode::UnauthorizedAccount,
     )]
-    pub user_pda: Account<'info, User>,
+    pub pda: Account<'info, User>,
     pub system_program: Program<'info, System>,
 }
 
 pub fn update_handler(ctx: Context<Update>, exp: Option<u32>, gold: Option<i32>) -> Result<()> {
     msg!("Starting user update for: {}", ctx.accounts.signer.key());
-    let user = &mut ctx.accounts.user_pda;
+    let user = &mut ctx.accounts.pda;
     // Update gold if provided
     if let Some(g) = gold {
         msg!("Updating gold by: {}", g);
