@@ -27,7 +27,7 @@ pub fn update_gold_handler(ctx: Context<UpdateGold>, gold: i32) -> Result<()> {
         .checked_add(gold as i32)
         .ok_or(ErrorCode::GoldOverflow)?;
     if temp_changed_gold < 0 {
-        return Err(ErrorCode::GoldOverflow.into());
+        return Err(ErrorCode::GoldNotEnough.into());
     }
     user.gold = temp_changed_gold;
 

@@ -10,6 +10,8 @@ pub enum ErrorCode {
     UnauthorizedAccount,
     #[msg("Your gold is overflow.")]
     GoldOverflow,
+    #[msg("Your gold is not enough.")]
+    GoldNotEnough,
     #[msg("Your experience is overflow.")]
     ExpOverflow,
 }
