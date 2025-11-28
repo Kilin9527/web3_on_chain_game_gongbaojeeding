@@ -26,3 +26,10 @@ anchor-lang = "0.32.1"
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = "z"
+strip = "symbols"
+panic = "abort"

@@ -15,7 +15,7 @@ text_based_game = "8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

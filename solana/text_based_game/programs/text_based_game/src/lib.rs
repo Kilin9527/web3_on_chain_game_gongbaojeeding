@@ -9,7 +9,7 @@ pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH");
+declare_id!("BGQP5xC8dFX8KyDXSWdBBm5g8sVAYfg2ESPrChxyoBqt");
 
 #[program]
 pub mod text_based_game {
