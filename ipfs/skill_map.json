@@ -1,0 +1,592 @@
+{
+    "name": "Skill map",
+    "description": "Defines the experience points granted by monsters based on their rarity.",
+    "version": "1.0",
+    "mappings": {
+        "common": {
+            "attack": [
+                {
+                    "name": "Normal Attack",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 1,
+                            "power": 1.0
+                        }
+                    ]
+                },
+                {
+                    "name": "Power Attack",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 1,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 2,
+                            "power": 1.1,
+                            "cost_value": 3
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 5,
+                            "power": 1.15,
+                            "cost_value": 5
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 10,
+                            "power": 1.2,
+                            "cost_value": 10
+                        },
+                        {
+                            "level": 4,
+                            "eligible_level": 20,
+                            "power": 1.3,
+                            "cost_value": 20
+                        },
+                        {
+                            "level": 5,
+                            "eligible_level": 35,
+                            "power": 1.5,
+                            "cost_value": 35
+                        }
+                    ]
+                },
+                {
+                    "name": "Charged Attack",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 1,
+                    "cooldown": 1,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 15,
+                            "power": 1.5,
+                            "cost_value": 15
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 25,
+                            "power": 1.6,
+                            "cost_value": 30
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 35,
+                            "power": 1.7,
+                            "cost_value": 40
+                        },
+                        {
+                            "level": 4,
+                            "eligible_level": 45,
+                            "power": 1.8,
+                            "cost_value": 50
+                        },
+                        {
+                            "level": 5,
+                            "eligible_level": 55,
+                            "power": 2.0,
+                            "cost_value": 60
+                        }
+                    ]
+                }
+            ],
+            "support": [
+                {
+                    "name": "Heal",
+                    "damage_type": 0,
+                    "activation_mode": 0,
+                    "target_scope": 0,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 1,
+                            "cost_value": 5,
+                            "effects": [
+                                {
+                                    "index": 100,
+                                    "scope": 0,
+                                    "power": 0.2
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 5,
+                            "cost_value": 10,
+                            "effects": [
+                                {
+                                    "index": 100,
+                                    "scope": 0,
+                                    "power": 0.25
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 10,
+                            "cost_value": 15,
+                            "effects": [
+                                {
+                                    "index": 100,
+                                    "scope": 0,
+                                    "power": 0.3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "eligible_level": 20,
+                            "cost_value": 25,
+                            "effects": [
+                                {
+                                    "index": 100,
+                                    "scope": 0,
+                                    "power": 0.35
+                                }
+                            ]
+                        },
+                        {
+                            "level": 5,
+                            "eligible_level": 30,
+                            "cost_value": 40,
+                            "effects": [
+                                {
+                                    "index": 100,
+                                    "scope": 0,
+                                    "power": 0.45
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Meditate",
+                    "damage_type": 0,
+                    "activation_mode": 0,
+                    "target_scope": 0,
+                    "cooldown": 3,
+                    "cost_type": 2,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 5,
+                            "cost_value": 0.2,
+                            "effects": [
+                                {
+                                    "index": 110,
+                                    "scope": 0,
+                                    "power": 0.2
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 20,
+                            "cost_value": 0.15,
+                            "effects": [
+                                {
+                                    "index": 110,
+                                    "scope": 0,
+                                    "power": 0.3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 30,
+                            "cooldown": 2,
+                            "cost_value": 0.1,
+                            "effects": [
+                                {
+                                    "index": 110,
+                                    "scope": 0,
+                                    "power": 0.4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Bonus": [
+                {
+                    "name": "Exp increase",
+                    "damage_type": 0,
+                    "activation_mode": 1,
+                    "target_scope": 0,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 10,
+                            "effects": [
+                                {
+                                    "index": 120,
+                                    "scope": 0,
+                                    "power": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 25,
+                            "effects": [
+                                {
+                                    "index": 120,
+                                    "scope": 0,
+                                    "power": 0.1
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 40,
+                            "effects": [
+                                {
+                                    "index": 120,
+                                    "scope": 0,
+                                    "power": 0.15
+                                }
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "eligible_level": 55,
+                            "effects": [
+                                {
+                                    "index": 120,
+                                    "scope": 0,
+                                    "power": 0.2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Gold increase",
+                    "damage_type": 0,
+                    "activation_mode": 1,
+                    "target_scope": 0,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 10,
+                            "effects": [
+                                {
+                                    "index": 130,
+                                    "scope": 0,
+                                    "power": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 25,
+                            "effects": [
+                                {
+                                    "index": 130,
+                                    "scope": 0,
+                                    "power": 0.1
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 40,
+                            "effects": [
+                                {
+                                    "index": 130,
+                                    "scope": 0,
+                                    "power": 0.15
+                                }
+                            ]
+                        },
+                        {
+                            "level": 4,
+                            "eligible_level": 55,
+                            "effects": [
+                                {
+                                    "index": 130,
+                                    "scope": 0,
+                                    "power": 0.2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "warrior": {
+            "attack": [
+                {
+                    "name": "Mortal Strike",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 1,
+                    "cost_type": 1,
+                    "cooldown": 2,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 12,
+                            "power": 1.2,
+                            "cost_value": 20,
+                            "effects": [
+                                {
+                                    "index": 101,
+                                    "scope": 1,
+                                    "power": 0.3,
+                                    "turns": 3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 30,
+                            "power": 1.5,
+                            "cost_mana": 50,
+                            "effects": [
+                                {
+                                    "index": 101,
+                                    "scope": 1,
+                                    "power": 0.5,
+                                    "turns": 3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 60,
+                            "power": 1.8,
+                            "cost_mana": 100,
+                            "effect_turns": 3,
+                            "effects": [
+                                {
+                                    "index": 101,
+                                    "scope": 1,
+                                    "power": 0.7,
+                                    "turns": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Sweeping Strike",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 3,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 15,
+                            "power": 0.7,
+                            "cost_value": 25
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 35,
+                            "power": 0.9,
+                            "cost_value": 40
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 70,
+                            "power": 1.1,
+                            "cost_value": 70
+                        }
+                    ]
+                },
+                {
+                    "name": "Overpower",
+                    "damage_type": 1,
+                    "activation_mode": 1,
+                    "target_scope": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 20,
+                            "power": 1.1
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 30,
+                            "power": 1.3
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 40,
+                            "power": 1.5
+                        }
+                    ]
+                },
+                {
+                    "name": "Attack increase",
+                    "damage_type": 0,
+                    "activation_mode": 1,
+                    "target_scope": 0,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 7,
+                            "power": 0.1
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 21,
+                            "power": 0.2
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 42,
+                            "power": 0.3
+                        }
+                    ]
+                }
+            ],
+            "defense": [
+                {
+                    "name": "Thorns",
+                    "damage_type": 1,
+                    "activation_mode": 0,
+                    "target_scope": 0,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 9,
+                            "cost_value": 17,
+                            "effects": [
+                                {
+                                    "index": 300,
+                                    "scope": 1,
+                                    "power": 0.3,
+                                    "turns": 3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 30,
+                            "cost_value": 34,
+                            "effects": [
+                                {
+                                    "index": 300,
+                                    "scope": 1,
+                                    "power": 0.4,
+                                    "turns": 3
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 60,
+                            "cost_value": 100,
+                            "effects": [
+                                {
+                                    "index": 101,
+                                    "scope": 1,
+                                    "power": 0.7,
+                                    "turns": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Toughness",
+                    "damage_type": 0,
+                    "activation_mode": 1,
+                    "target_scope": 0,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 16,
+                            "effects": [
+                                {
+                                    "index": 210,
+                                    "scope": 0,
+                                    "power": 100
+                                },
+                                {
+                                    "index": 203,
+                                    "scope": 0,
+                                    "power": 20
+                                }
+                            ]
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 32,
+                            "effects": [
+                                {
+                                    "index": 210,
+                                    "scope": 0,
+                                    "power": 200
+                                },
+                                {
+                                    "index": 203,
+                                    "scope": 0,
+                                    "power": 50
+                                }
+                            ]
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 60,
+                            "effects": [
+                                {
+                                    "index": 210,
+                                    "scope": 0,
+                                    "power": 500
+                                },
+                                {
+                                    "index": 203,
+                                    "scope": 0,
+                                    "power": 80
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "support": [
+                {
+                    "name": "Elemental Strike",
+                    "damage_type": 2,
+                    "activation_mode": 0,
+                    "target_scope": 1,
+                    "cost_type": 1,
+                    "levels": [
+                        {
+                            "level": 1,
+                            "eligible_level": 9,
+                            "cost_value": 10,
+                            "power": 0.9
+                        },
+                        {
+                            "level": 2,
+                            "eligible_level": 39,
+                            "cost_value": 20,
+                            "power": 1
+                        },
+                        {
+                            "level": 3,
+                            "eligible_level": 69,
+                            "cost_value": 40,
+                            "power": 1.1
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,195 +1,243 @@
 {
+    "name": "role attributes",
+    "description": "Defines the attributes of roles.",
+    "version": "1.0",
     "basic_attributes": [
         {
-            "type": "HP",
+            "type": "hp",
             "name": "Health Points",
             "description": "Health Points. Once it drops to 0, the character dies and the game ends."
         },
         {
-            "type": "MP",
+            "type": "mp",
             "name": "Mana Points",
             "description": "Mana Points. Consumed when using spells."
         },
         {
-            "type": "STR",
+            "type": "str",
             "name": "Strength",
-            "description": "Strength. Affects the character's physical attack power, HP, and physical defense."
+            "description": "Strength. Affects the character's physical attack power, physical defense power, physical penetration, physical hit rate, and HP.",
+            "affect": {
+                "physical_attack_power": 5,
+                "physical_defense_power": 1,
+                "physical_penetration": 1,
+                "physical_hit_rate": 2,
+                "HP": 2
+            }
         },
         {
-            "type": "AGI",
+            "type": "agi",
             "name": "Agility",
-            "description": "Agility. Affects the character's physical hit rate, physical evasion rate, and physical penetration."
+            "description": "Agility. Affects the character's physical attack power, physical hit rate, physical evasion rate, physical penetration and HP.",
+            "affect": {
+                "physical_attack_power": 3,
+                "physical_evasion_rate": 3,
+                "physical_penetration": 3,
+                "physical_hit_rate": 3,
+                "hp": 1 
+            }
         },
         {
-            "type": "STA",
+            "type": "sta",
             "name": "Stamina",
-            "description": "Stamina. Affects the character's HP, physical defense, and magic defense."
+            "description": "Stamina. Affects the character's HP, physical defense power, physical evasion rate, magic defense power, and magic evasion rate.",
+            "affect": {
+                "physical_defense_power": 3,
+                "physical_evasion_rate": 1,
+                "magic_defense_power": 1,
+                "magic_evasion_rate": 1,
+                "hp": 5
+            }
         },
         {
-            "type": "INT",
+            "type": "int",
             "name": "Intellect",
-            "description": "Intellect. Affects the character's magic attack power, MP, and magic defense."
+            "description": "Intellect. Affects the character's magic attack power, magic defense power, magic penetration, magic hit rate and MP.",
+            "affect": {
+                "magic_attack_power": 5,
+                "magic_defense_power": 2,
+                "magic_penetration": 1,
+                "magic_hit_rate": 2,
+                "mp": 2
+            }
         },
         {
-            "type": "SPI",
+            "type": "spi",
             "name": "Spirit",
-            "description": "Spirit. Affects the character's magic hit rate, magic evasion rate, and magic penetration."
+            "description": "Spirit. Affects the character's magic attack power, magic defense power, magic hit rate, magic evasion rate and MP.",
+            "affect": {
+                "magic_attack_power": 1,
+                "magic_defense_power": 3,
+                "magic_hit_rate": 2,
+                "magic_evasion_rate": 2,
+                "mp": 4
+            }
         }
     ],
     "general_attributes": [
         {
-            "type": "CC",
+            "type": "critical_hit_chance",
             "name": "Critical Hit Chance",
             "description": "Critical Hit Chance. The probability of dealing critical damage to enemies."
         },
         {
-            "type": "CD",
+            "type": "critical_damage",
             "name": "Critical Damage",
             "description": "Critical Damage. The base critical damage is 150% of normal damage."
         },
         {
-            "type": "HP Regen/Turn",
-            "name": "HP Regen/Turn",
-            "description": "HP Regen/Turn. The health automatically restored per turn."
+            "type": "hp_recovery",
+            "name": "HP Recovery",
+            "description": "HP Recovery. The health automatically restored per turn."
         },
         {
-            "type": "MP Regen/Turn",
-            "name": "MP Regen/Turn",
-            "description": "MP Regen/Turn. The mana automatically restored per turn."
+            "type": "mp_recovery",
+            "name": "MP Recovery",
+            "description": "MP Recovery. The mana automatically restored per turn."
         },
         {
-            "type": "HS",
-            "name": "Health Steal",
-            "description": "Health Steal. The health absorbed with each attack."
+            "type": "hp_steal",
+            "name": "HP Steal",
+            "description": "HP Steal. The health absorbed with each attack."
         },
         {
-            "type": "MS",
-            "name": "Mana Steal",
-            "description": "Mana Steal. The mana absorbed with each attack."
+            "type": "mp_steal",
+            "name": "MP Steal",
+            "description": "MP Steal. The mana absorbed with each attack."
         }
     ],
     "physical_attributes": [
         {
-            "type": "ATK",
+            "type": "physical_attack_power",
             "name": "Physical Attack Power",
             "description": "Physical Attack Power. Deals physical damage to enemies."
         },
         {
-            "type": "DEF",
-            "name": "Physical Defense",
-            "description": "Physical Defense. Resists physical damage from enemies."
+            "type": "physical_defense_power",
+            "name": "Physical Defense Power",
+            "description": "Physical Defense Power. Resists physical damage from enemies."
         },
         {
-            "type": "PHR",
+            "type": "physical_hit_rate",
             "name": "Physical Hit Rate",
             "description": "Physical Hit Rate. The probability of hitting an enemy, default 90%."
         },
         {
-            "type": "PER",
+            "type": "physical_evasion_rate",
             "name": "Physical Evasion Rate",
             "description": "Physical Evasion Rate. The probability of dodging an enemy's attack, default 0%."
         },
         {
-            "type": "PPen",
+            "type": "physical_penetration",
             "name": "Physical Penetration",
             "description": "Physical Penetration. Ignores the enemy's defense."
         }
     ],
     "magical_attributes": [
         {
-            "type": "FireDamage",
-            "name": "Fire Attribute Damage",
-            "description": "FireDamage. Fire Attribute Damage."
+            "type": "magic_attack_power",
+            "name": "Magic Attack Power",
+            "description": "Magic Attack Power. Deals magical damage to enemies."
         },
         {
-            "type": "ColdDamage",
-            "name": "Cold Attribute Damage",
-            "description": "ColdDamage. Cold Attribute Damage."
+            "type": "magic_defense_power",
+            "name": "Magic Defense Power",
+            "description": "Magic Defense Power. Resists magical damage from enemies."
         },
         {
-            "type": "WindDamage",
-            "name": "Wind Attribute Damage",
-            "description": "WindDamage. Wind Attribute Damage."
-        },
-        {
-            "type": "ThunderDamage",
-            "name": "Thunder Attribute Damage",
-            "description": "ThunderDamage. Thunder Attribute Damage."
-        },
-        {
-            "type": "EarthDamage",
-            "name": "Earth Attribute Damage",
-            "description": "EarthDamage. Earth Attribute Damage."
-        },
-        {
-            "type": "LightDamage",
-            "name": "Light Attribute Damage",
-            "description": "LightDamage. Light Attribute Damage."
-        },
-        {
-            "type": "DarkDamage",
-            "name": "Dark Attribute Damage",
-            "description": "DarkDamage. Dark Attribute Damage."
-        },
-        {
-            "type": "ChaosDamage",
-            "name": "Chaos Damage",
-            "description": "ChaosDamage. Chaos Damage."
-        },
-        {
-            "type": "FireResistance",
-            "name": "Fire Attribute Resistance",
-            "description": "FireResistance. Fire Attribute Resistance."
-        },
-        {
-            "type": "ColdResistance",
-            "name": "Cold Attribute Resistance",
-            "description": "ColdResistance. Cold Attribute Resistance."
-        },
-        {
-            "type": "WindResistance",
-            "name": "Wind Attribute Resistance",
-            "description": "WindResistance. Wind Attribute Resistance."
-        },
-        {
-            "type": "ThunderResistance",
-            "name": "Thunder Attribute Resistance",
-            "description": "ThunderResistance. Thunder Attribute Resistance."
-        },
-        {
-            "type": "EarthResistance",
-            "name": "Earth Attribute Resistance",
-            "description": "EarthResistance. Earth Attribute Resistance."
-        },
-        {
-            "type": "LightResistance",
-            "name": "Light Attribute Resistance",
-            "description": "LightResistance. Light Attribute Resistance."
-        },
-        {
-            "type": "DarkResistance",
-            "name": "Dark Attribute Resistance",
-            "description": "DarkResistance. Dark Attribute Resistance."
-        },
-        {
-            "type": "ChaosResistance",
-            "name": "Chaos Resistance",
-            "description": "ChaosResistance. Chaos Resistance."
-        },
-        {
-            "type": "MHR",
+            "type": "magic_hit_rate",
             "name": "Magic Hit Rate",
             "description": "Magic Hit Rate. The probability of a spell hitting an enemy, default 90%."
         },
         {
-            "type": "MER",
+            "type": "magic_evasion_rate",
             "name": "Magic Evasion Rate",
             "description": "Magic Evasion Rate. The probability of dodging an enemy's magical attack, default 0%."
         },
         {
-            "type": "MPen",
+            "type": "magic_penetration",
             "name": "Magic Penetration",
             "description": "Magic Penetration. Ignores the enemy's magic defense."
+        },
+        {
+            "type": "fire_damage",
+            "name": "Fire Attribute Damage",
+            "description": "FireDamage. Fire Attribute Damage."
+        },
+        {
+            "type": "cold_damage",
+            "name": "Cold Attribute Damage",
+            "description": "ColdDamage. Cold Attribute Damage."
+        },
+        {
+            "type": "wind_damage",
+            "name": "Wind Attribute Damage",
+            "description": "WindDamage. Wind Attribute Damage."
+        },
+        {
+            "type": "thunder_damage",
+            "name": "Thunder Attribute Damage",
+            "description": "ThunderDamage. Thunder Attribute Damage."
+        },
+        {
+            "type": "earth_damage",
+            "name": "Earth Attribute Damage",
+            "description": "EarthDamage. Earth Attribute Damage."
+        },
+        {
+            "type": "light_damage",
+            "name": "Light Attribute Damage",
+            "description": "LightDamage. Light Attribute Damage."
+        },
+        {
+            "type": "dark_damage",
+            "name": "Dark Attribute Damage",
+            "description": "DarkDamage. Dark Attribute Damage."
+        },
+        {
+            "type": "chaos_damage",
+            "name": "Chaos Damage",
+            "description": "ChaosDamage. Chaos Damage."
+        },
+        {
+            "type": "fire_resistance",
+            "name": "Fire Attribute Resistance",
+            "description": "FireResistance. Fire Attribute Resistance."
+        },
+        {
+            "type": "cold_resistance",
+            "name": "Cold Attribute Resistance",
+            "description": "ColdResistance. Cold Attribute Resistance."
+        },
+        {
+            "type": "wind_resistance",
+            "name": "Wind Attribute Resistance",
+            "description": "WindResistance. Wind Attribute Resistance."
+        },
+        {
+            "type": "thunder_resistance",
+            "name": "Thunder Attribute Resistance",
+            "description": "ThunderResistance. Thunder Attribute Resistance."
+        },
+        {
+            "type": "earth_resistance",
+            "name": "Earth Attribute Resistance",
+            "description": "EarthResistance. Earth Attribute Resistance."
+        },
+        {
+            "type": "light_resistance",
+            "name": "Light Attribute Resistance",
+            "description": "LightResistance. Light Attribute Resistance."
+        },
+        {
+            "type": "dark_resistance",
+            "name": "Dark Attribute Resistance",
+            "description": "DarkResistance. Dark Attribute Resistance."
+        },
+        {
+            "type": "chaos_resistance",
+            "name": "Chaos Resistance",
+            "description": "ChaosResistance. Chaos Resistance."
         }
     ]
 }

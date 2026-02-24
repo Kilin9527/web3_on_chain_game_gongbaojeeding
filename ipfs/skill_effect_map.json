@@ -1,0 +1,102 @@
+{
+    "name": "Skill effect map",
+    "description": "Defines the effect.",
+    "version": "1.0",
+    "mappings": {
+        "damage_type": {
+            "none": 0,
+            "physical": 1,
+            "magic": 2,
+            "true": 99
+        },
+        "activation_mode": {
+            "active": 0,
+            "passive": 1
+        },
+        "cost_type": {
+            "none": 0,
+            "mp": 1,
+            "hp": 2
+        },
+        "target_scope": {
+            "self": 0,
+            "enemy_1": 1,
+            "enemy_2": 2,
+            "enemy_3": 3,
+            "enemy_4": 4,
+            "enemy_all": 99
+        },
+        "effects": [
+            {
+                "index": 100,
+                "attribute": "hp",
+                "description": "Healing HP by X%."
+            },
+            {
+                "index": 102,
+                "attribute": "hp",
+                "description": "Reduces healing effect by X%"
+            },
+            {
+                "index": 110,
+                "attribute": "mp",
+                "description": "Recovery MP by X%."
+            },
+            {
+                "index": 120,
+                "attribute": "exp",
+                "description": "Increases exp gained by X%."
+            },
+            {
+                "index": 130,
+                "attribute": "gold",
+                "description": "Increases gold gained by X%."
+            },
+            {
+                "index": 200,
+                "attribute": "ap",
+                "description": "Increases attack power by X%."
+            },
+            {
+                "index": 201,
+                "attribute": "ap",
+                "description": "Increases attack power by X."
+            },
+            {
+                "index": 202,
+                "attribute": "dp",
+                "description": "Increases defense power by X%."
+            },
+            {
+                "index": 203,
+                "attribute": "dp",
+                "description": "Increases defense power by X."
+            },
+            {
+                "index": 210,
+                "attribute": "hp",
+                "description": "Increase max hp by X."
+            },
+            {
+                "index": 211,
+                "attribute": "hp",
+                "description": "Increase max hp by X%."
+            },
+                        {
+                "index": 212,
+                "attribute": "mp",
+                "description": "Increase max mp by X."
+            },
+            {
+                "index": 213,
+                "attribute": "mp",
+                "description": "Increase max mp by X%."
+            },
+            {
+                "index": 300,
+                "attribute": "reflect",
+                "description": "Reflect X% of the damage dealt by enemies."
+            }
+        ]
+    }
+}

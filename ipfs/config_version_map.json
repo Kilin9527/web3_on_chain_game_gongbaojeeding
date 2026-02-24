@@ -1,0 +1,42 @@
+[
+    {
+        "name": "attributes",
+        "version": "1.0",
+        "ipfs": "bafkreihcisrp4zfxnshu4teik5q7qhfdurmbhjjiffkgtsvzvave7chtcq"
+    },
+    {
+        "name": "job_growth_map",
+        "version": "1.0",
+        "ipfs": "bafkreifm4w5w5xrawgkg5avtyf6jl3pzwgkknyiiyvtz7o3ygl57fjqzpe"
+    },
+    {
+        "name": "level_exp_map",
+        "version": "1.0",
+        "ipfs": "bafkreih46e4umkdiwqwifdzemlvicwxf4vdckrfre2oej4pkpogzoqv534"
+    },
+    {
+        "name": "monster_exp_map",
+        "version": "1.0",
+        "ipfs": "bafkreidmvujbcnmfd7qtavdx5fk33hejtouw4bxi72c4axr2aa2lh4gdta"
+    },
+    {
+        "name": "skill_effect_map",
+        "version": "1.0",
+        "ipfs": "bafkreifr66drbaelcuvw53sjdg4fqehafyzzcjndjca345oapgohyliuem"
+    },
+    {
+        "name": "skill_map",
+        "version": "1.0",
+        "ipfs": "bafkreigutmuraesctuloitdbudlc6ojifklnhpofloprbuokdksudx4tky"
+    },
+    {
+        "name": "stage_wave_map",
+        "version": "1.0",
+        "ipfs": "bafkreiflq27oubsiekyggv3d6ua2zk4o4gqadgcl6jwmbo3brbfw22hwma"
+    },
+    {
+        "name": "state_exp_supply",
+        "version": "1.0",
+        "ipfs": "bafkreidjtbj3yvfie27llt4ibamsu7oqsq4yjen24b6472kwfby7lbldia"
+    }
+]

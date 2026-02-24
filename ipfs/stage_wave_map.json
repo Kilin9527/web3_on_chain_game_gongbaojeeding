@@ -1,0 +1,11 @@
+{
+    "name": "Stage and waves",
+    "description": "Defines the number of waves in each stage range.",
+    "version": "1.0",
+    "mappings": [
+        {"start": 1, "end": 20, "waves": 3},
+        {"start": 21, "end": 50, "waves": 4},
+        {"start": 51, "end": 100, "waves": 5},
+        {"start": 101, "end": 99999, "waves": 10}
+    ]
+}

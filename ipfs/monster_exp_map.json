@@ -1,0 +1,11 @@
+{
+    "name": "Monster experience map",
+    "description": "Defines the experience points granted by monsters based on their rarity.",
+    "version": "1.0",
+    "mappings": [
+        { "rare": 1, "exp": 10, "scaling": 0.6, "offset": 0.1 },
+        { "rare": 2, "exp": 20, "scaling": 0.8, "offset": 0.1 },
+        { "rare": 3, "exp": 30, "scaling": 1.0, "offset": 0.15 },
+        { "rare": 4, "exp": 50, "scaling": 1.2, "offset": 0.2 }
+    ]
+}
