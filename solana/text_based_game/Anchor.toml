@@ -6,10 +6,10 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-text_based_game = "8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH"
+text_based_game = "BGQP5xC8dFX8KyDXSWdBBm5g8sVAYfg2ESPrChxyoBqt"
 
 [programs.devnet]
-text_based_game = "8Ya1qpPiLngJfPzQT1qX5hLFrzdV9Copwrq32SmkrpbH"
+text_based_game = "BGQP5xC8dFX8KyDXSWdBBm5g8sVAYfg2ESPrChxyoBqt"
 
 [registry]
 url = "https://api.apr.dev"

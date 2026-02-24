@@ -10,6 +10,7 @@ lto = "fat"
 opt-level = "z"
 strip = "symbols"
 panic = "abort"
+overflow-checks = true
 
 [profile.release.build-override]
 opt-level = 3
