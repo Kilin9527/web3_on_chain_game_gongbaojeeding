@@ -1,0 +1,25 @@
+{
+    "name": "Level and experience map",
+    "description": "Defines the experience points required to level up from one level to the next.",
+    "version": "1.0",
+    "mappings": [
+        { "start": 1, "end": 1, "next": 50 },
+        { "start": 2, "end": 5, "next": 100 },
+        { "start": 6, "end": 10, "next": 150 },
+        { "start": 11, "end": 20, "next": 200 },
+        { "start": 21, "end": 40, "next": 400 },
+        { "start": 41, "end": 60, "next": 600 },
+        { "start": 61, "end": 80, "next": 1000 },
+        { "start": 81, "end": 100, "next": 2000 },
+        { "start": 101, "end": 200, "next": 2500 },
+        { "start": 201, "end": 300, "next": 3500 },
+        { "start": 301, "end": 400, "next": 4500 },
+        { "start": 401, "end": 500, "next": 5500 },
+        { "start": 501, "end": 600, "next": 6500 },
+        { "start": 601, "end": 700, "next": 7500 },
+        { "start": 701, "end": 800, "next": 8500 },
+        { "start": 801, "end": 900, "next" : 9500 },
+        { "start": 901, "end": 1000, "next": 10000 },
+        { "start": 1001, "end": 99999, "next": 20000 }
+    ]
+}

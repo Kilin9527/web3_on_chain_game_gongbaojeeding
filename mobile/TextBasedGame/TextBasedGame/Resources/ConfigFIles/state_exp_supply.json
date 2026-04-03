@@ -1,0 +1,18 @@
+{
+    "name": "Stage experience map",
+    "description": "Defines the experience points granted based on stage levels.",
+    "version": "1.0",
+    "mappings": [
+        { "start": 1, "end": 1, "count": 80, "offset": 0 },
+        { "start": 2, "end": 2, "count": 90, "offset": 0 },
+        { "start": 3, "end": 3, "count": 100, "offset": 0 },
+        { "start": 4, "end": 4, "count": 120, "offset": 0 },
+        { "start": 5, "end": 5, "count": 130, "offset": 0 },
+        { "start": 6, "end": 6, "count": 150, "offset": 0 },
+        { "start": 7, "end": 7, "count": 160, "offset": 0 },
+        { "start": 8, "end": 8, "count": 170, "offset": 0 },
+        { "start": 9, "end": 9, "count": 180, "offset": 0 },
+        { "start": 10, "end": 10, "count": 200, "offset": 0 },
+        { "start": 11, "end": 99999, "count": 200, "offset": 10 }
+    ]
+}
