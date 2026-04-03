@@ -2,6 +2,7 @@ use anchor_lang::prelude::*;
 
 use crate::error::ErrorCode;
 use crate::state::User;
+use crate::constants::*;
 
 #[derive(Accounts)]
 pub struct UpdateExp<'info> {
@@ -10,7 +11,7 @@ pub struct UpdateExp<'info> {
 
     #[account(
         mut,
-        seeds = [b"user", signer.key().as_ref()],
+        seeds = [USER_EXP, signer.key().as_ref()],
         bump = pda.bump,
         constraint = pda.authority == signer.key() @ ErrorCode::UnauthorizedAccount,
     )]

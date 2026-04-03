@@ -55,7 +55,7 @@ pub struct InitializeConfig<'info> {
     #[account(
         init, 
         payer = admin, 
-        seeds = [Config::SEED_PREFIX],
+        seeds = [CONFIG],
         bump,
         space = Config::MAXIMUM_SIZE
     )]
@@ -71,7 +71,7 @@ pub struct InitializeConfig<'info> {
 pub struct UpdateConfig<'info> { 
     #[account(
         mut,
-        seeds = [Config::SEED_PREFIX],
+        seeds = [CONFIG],
         bump,
         has_one = admin
     )]
@@ -84,7 +84,7 @@ pub struct UpdateConfig<'info> {
 pub struct ProposeConfigAdmin<'info> {
     #[account(
         mut,
-        seeds = [Config::SEED_PREFIX],
+        seeds = [CONFIG],
         bump,
         has_one = admin @ ErrorCode::TransferConfigAdminFailed
     )]
@@ -107,7 +107,7 @@ pub struct ProposeConfigAdmin<'info> {
 pub struct AcceptConfigAdmin<'info> {
     #[account(
         mut,
-        seeds = [Config::SEED_PREFIX],
+        seeds = [CONFIG],
         bump,
         constraint = config.pending_admin == Some(new_admin.key()) @ ErrorCode::InvalidAdminChange
     )]

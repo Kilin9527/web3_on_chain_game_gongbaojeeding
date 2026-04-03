@@ -42,4 +42,12 @@ pub mod text_based_game {
     pub fn accept_admin(ctx: Context<AcceptConfigAdmin>) -> Result<()> {
         handler_accept_admin(ctx)
     }
+
+    pub fn initialize_mint_config(ctx: Context<InitializeMintConfig>, backend_pubkey: Pubkey) -> Result<()> {
+        handler_initialize_mint_config(ctx, backend_pubkey)
+    }
+
+    pub fn claim_gold(ctx: Context<ClaimGold>, amount: u64, nonce: u64, _signature: [u8; 64] ) -> Result<()> {
+        handler_claim_gold(ctx, amount, nonce, _signature)
+    }
 }

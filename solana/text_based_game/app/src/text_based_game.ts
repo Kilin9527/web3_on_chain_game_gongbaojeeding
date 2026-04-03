@@ -155,6 +155,87 @@ export type TextBasedGame = {
       ]
     },
     {
+      "name": "initializeMintConfig",
+      "discriminator": [
+        61,
+        141,
+        161,
+        167,
+        9,
+        153,
+        85,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "backendConfig",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mintAuthorityPda",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  103,
+                  111,
+                  108,
+                  100,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "address": "3iyS9TmCgCFCisUjjnKN1hQEVDhXFrk2b5X5cg9M92gi"
+        },
+        {
+          "name": "systemProgram",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "backendPubkey",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
       "name": "proposeAdmin",
       "discriminator": [
         121,
@@ -280,7 +361,11 @@ export type TextBasedGame = {
                   117,
                   115,
                   101,
-                  114
+                  114,
+                  95,
+                  101,
+                  120,
+                  112
                 ]
               },
               {
@@ -331,7 +416,12 @@ export type TextBasedGame = {
                   117,
                   115,
                   101,
-                  114
+                  114,
+                  95,
+                  103,
+                  111,
+                  108,
+                  100
                 ]
               },
               {
@@ -355,6 +445,19 @@ export type TextBasedGame = {
     }
   ],
   "accounts": [
+    {
+      "name": "backendConfig",
+      "discriminator": [
+        224,
+        68,
+        245,
+        27,
+        117,
+        207,
+        210,
+        158
+      ]
+    },
     {
       "name": "config",
       "discriminator": [
@@ -427,9 +530,34 @@ export type TextBasedGame = {
       "code": 6008,
       "name": "invalidAdminChange",
       "msg": "Invalid admin change."
+    },
+    {
+      "code": 6009,
+      "name": "invalidMintAuthority",
+      "msg": "Invalid mint authority."
     }
   ],
   "types": [
+    {
+      "name": "backendConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "backendPubkey",
+            "type": "pubkey"
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "mintAuthBump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
     {
       "name": "config",
       "type": {
@@ -483,9 +611,39 @@ export type TextBasedGame = {
   ],
   "constants": [
     {
-      "name": "seed",
-      "type": "string",
-      "value": "\"anchor\""
+      "name": "config",
+      "type": "bytes",
+      "value": "[67, 111, 110, 102, 105, 103]"
+    },
+    {
+      "name": "genesisAdmin",
+      "type": "pubkey",
+      "value": "3iyS9TmCgCFCisUjjnKN1hQEVDhXFrk2b5X5cg9M92gi"
+    },
+    {
+      "name": "mintConfig",
+      "type": "bytes",
+      "value": "[109, 105, 110, 116, 95, 99, 111, 110, 102, 105, 103]"
+    },
+    {
+      "name": "mintGoldAuth",
+      "type": "bytes",
+      "value": "[109, 105, 110, 116, 95, 103, 111, 108, 100, 95, 97, 117, 116, 104]"
+    },
+    {
+      "name": "user",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114]"
+    },
+    {
+      "name": "userExp",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114, 95, 101, 120, 112]"
+    },
+    {
+      "name": "userGold",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114, 95, 103, 111, 108, 100]"
     }
   ]
 };

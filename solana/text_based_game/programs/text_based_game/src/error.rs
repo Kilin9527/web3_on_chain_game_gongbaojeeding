@@ -22,4 +22,17 @@ pub enum ErrorCode {
     TransferConfigAdminFailed,
     #[msg("Invalid admin change.")]
     InvalidAdminChange,
+    // Mint related errors
+    #[msg("Invalid mint authority.")]
+    InvalidMintAuthority,
+    #[msg("Invalid backend key.")]
+    InvalidBackendKey,
+    #[msg("Missing signature instruction.")]
+    MissingSignatureInstruction,
+    #[msg("Invalid signature instruction.")]
+    InvalidSignatureInstruction,
+    #[msg("Signature data mismatch.")]
+    SignatureDataMismatch,
+    #[msg("Amount overflow.")]
+    AmountOverflow,
 }

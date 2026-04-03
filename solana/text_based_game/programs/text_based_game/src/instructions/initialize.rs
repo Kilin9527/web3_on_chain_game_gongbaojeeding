@@ -1,6 +1,7 @@
 use anchor_lang::prelude::*;
 use crate::state::User;
 use crate::error::ErrorCode;
+use crate::constants::*;
 
 #[derive(Accounts)]
 pub struct Initialize<'info> {
@@ -11,7 +12,7 @@ pub struct Initialize<'info> {
         init, 
         payer = signer,
         space = 8 + User::INIT_SPACE, // Adjusted space for User struct
-        seeds = [b"user", signer.key().as_ref()],
+        seeds = [USER, signer.key().as_ref()],
         bump
     )]
     pub pda: Account<'info, User>,

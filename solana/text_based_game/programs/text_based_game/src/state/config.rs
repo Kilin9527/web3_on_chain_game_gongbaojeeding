@@ -13,6 +13,4 @@ impl Config {
     // 32 (Pubkey) + (1 (Option discriminant) + 32 (Pubkey)) + (4 + 64 (String))
     // 50 extra bytes for future fields
     pub const MAXIMUM_SIZE: usize = 8 + 32 + (1 + 32) + (4 + 64) + 50;
-
-    pub const SEED_PREFIX: &'static [u8] = b"Config";
 }

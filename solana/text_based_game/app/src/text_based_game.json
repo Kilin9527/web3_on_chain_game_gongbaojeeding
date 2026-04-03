@@ -149,6 +149,87 @@
       ]
     },
     {
+      "name": "initialize_mint_config",
+      "discriminator": [
+        61,
+        141,
+        161,
+        167,
+        9,
+        153,
+        85,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "backend_config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint_authority_pda",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  103,
+                  111,
+                  108,
+                  100,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "address": "3iyS9TmCgCFCisUjjnKN1hQEVDhXFrk2b5X5cg9M92gi"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "backend_pubkey",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
       "name": "propose_admin",
       "discriminator": [
         121,
@@ -274,7 +355,11 @@
                   117,
                   115,
                   101,
-                  114
+                  114,
+                  95,
+                  101,
+                  120,
+                  112
                 ]
               },
               {
@@ -325,7 +410,12 @@
                   117,
                   115,
                   101,
-                  114
+                  114,
+                  95,
+                  103,
+                  111,
+                  108,
+                  100
                 ]
               },
               {
@@ -349,6 +439,19 @@
     }
   ],
   "accounts": [
+    {
+      "name": "BackendConfig",
+      "discriminator": [
+        224,
+        68,
+        245,
+        27,
+        117,
+        207,
+        210,
+        158
+      ]
+    },
     {
       "name": "Config",
       "discriminator": [
@@ -421,9 +524,34 @@
       "code": 6008,
       "name": "InvalidAdminChange",
       "msg": "Invalid admin change."
+    },
+    {
+      "code": 6009,
+      "name": "InvalidMintAuthority",
+      "msg": "Invalid mint authority."
     }
   ],
   "types": [
+    {
+      "name": "BackendConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "backend_pubkey",
+            "type": "pubkey"
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint_auth_bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
     {
       "name": "Config",
       "type": {
@@ -477,9 +605,39 @@
   ],
   "constants": [
     {
-      "name": "SEED",
-      "type": "string",
-      "value": "\"anchor\""
+      "name": "CONFIG",
+      "type": "bytes",
+      "value": "[67, 111, 110, 102, 105, 103]"
+    },
+    {
+      "name": "GENESIS_ADMIN",
+      "type": "pubkey",
+      "value": "3iyS9TmCgCFCisUjjnKN1hQEVDhXFrk2b5X5cg9M92gi"
+    },
+    {
+      "name": "MINT_CONFIG",
+      "type": "bytes",
+      "value": "[109, 105, 110, 116, 95, 99, 111, 110, 102, 105, 103]"
+    },
+    {
+      "name": "MINT_GOLD_AUTH",
+      "type": "bytes",
+      "value": "[109, 105, 110, 116, 95, 103, 111, 108, 100, 95, 97, 117, 116, 104]"
+    },
+    {
+      "name": "USER",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114]"
+    },
+    {
+      "name": "USER_EXP",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114, 95, 101, 120, 112]"
+    },
+    {
+      "name": "USER_GOLD",
+      "type": "bytes",
+      "value": "[117, 115, 101, 114, 95, 103, 111, 108, 100]"
     }
   ]
 }
